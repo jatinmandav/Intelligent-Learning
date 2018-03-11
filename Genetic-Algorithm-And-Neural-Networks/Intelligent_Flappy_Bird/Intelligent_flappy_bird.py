@@ -104,7 +104,6 @@ class Brain:
             else:
                 data = sigmoid(activation)
             i += 1
-        print(data)
     
         data = abs(data[0][0])
         
