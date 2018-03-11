@@ -254,7 +254,7 @@ class Population:
         self.normalizeFitness()
 
         index = 0
-        fitness1 = self.population[indexA].fitness
+        fitness1 = self.population[index].fitness
         
         for i in xrange(len(self.population)):
             if self.population[i].fitness > self.population[index].fitness:
