@@ -308,9 +308,9 @@ class Population:
         # Loading the Previous generation Weights and Biases
         index = 0
         for i in xrange(len(self.population)):
-            with open("Trained_biases/biases_" + str(index) + ".pkl", "rb") as f:
+            with open("Trained_Biases/biases_" + str(index) + ".pkl", "rb") as f:
                 self.population[i].brain.biases = pickle.load(f)
-            with open("Trained_weights/weights_" + str(index) + ".pkl", "rb") as f:
+            with open("Trained_Weights/weights_" + str(index) + ".pkl", "rb") as f:
                 self.population[i].brain.weights = pickle.load(f)
             index += 1
 
@@ -318,9 +318,9 @@ class Population:
         # Loading the Best Weights and Biases So Far
         index = 0
         for i in xrange(len(self.population)):
-            with open("Trained_biases_Best/biases_" + str(index) + ".pkl", "rb") as f:
+            with open("Trained_Biases_Best/biases_" + str(index) + ".pkl", "rb") as f:
                 self.population[i].brain.biases = pickle.load(f)
-            with open("Trained_weights_Best/weights_" + str(index) + ".pkl", "rb") as f:
+            with open("Trained_Weights_Best/weights_" + str(index) + ".pkl", "rb") as f:
                 self.population[i].brain.weights = pickle.load(f)
             index += 1
 
@@ -454,9 +454,9 @@ def pickOne(population):
 def save_best_generation(population):
     i = 0
     for species in population:
-        with open("Trained_biases/biases_" + str(i) + ".pkl", "wb") as f:
+        with open("Trained_Biases/biases_" + str(i) + ".pkl", "wb") as f:
             pickle.dump(species.brain.biases, f)
-        with open("Trained_weights/weights_" + str(i) + ".pkl", "wb") as f:
+        with open("Trained_Weights/weights_" + str(i) + ".pkl", "wb") as f:
             pickle.dump(species.brain.weights, f)
         i += 1
     index = 0
